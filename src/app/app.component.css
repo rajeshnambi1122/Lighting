@@ -197,7 +197,6 @@ body {
 
   .hero-content {
     max-width: 90%;
-    text-align: center;
   }
 
   .hero-content h1 {
@@ -1414,7 +1413,7 @@ body {
   }
 
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .hero-content p {
@@ -1981,4 +1980,24 @@ footer {
   color: #56b8ff;
   border-top: 1px solid #2b3a67;
   padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .telegram-button-large {
+    padding: 0.5rem 1rem; /* Adjust padding for mobile */
+    font-size: 1rem; /* Adjust font size for mobile */
+    align-items: center; /* Center align items */
+  }
+
+  .telegram-button-large span {
+    font-size: 0.9rem; /* Adjust font size of spans for mobile */
+  }
+
+  .telegram-button-large i {
+    font-size: 20px; /* Adjust icon size for mobile */
+  }
+
+  .arrow {
+    font-size: 1.2rem; /* Adjust arrow size for mobile */
+  }
 }
