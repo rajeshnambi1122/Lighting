@@ -91,7 +91,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 80vh;
+  min-height: 90vh;
   position: relative;
   overflow: hidden;
   background-color: #020b2a;
@@ -429,11 +429,9 @@ body {
 }
 
 .timeline-icon {
-  font-size: 24px;
-  position: absolute;
-  left: -60px;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  left: 0;
+  margin-bottom: 1rem;
   width: 50px;
   height: 50px;
   background: rgba(0, 229, 255, 0.1);
@@ -449,7 +447,7 @@ body {
 .timeline-item:hover .timeline-icon {
   background: #00e5ff;
   color: #020b2a;
-  transform: translateY(-50%) scale(1.1);
+  transform: scale(1.1);
   box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
 }
 
@@ -502,9 +500,9 @@ body {
   }
 
   .timeline-icon {
-    left: -45px;
-    width: 60px;
-    height: 60px;
+    left: 0;
+    width: 40px;
+    height: 40px;
     font-size: 18px;
   }
 }
@@ -894,4 +892,16 @@ footer {
   .contact-container p {
     font-size: 1rem;
   }
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+.footer-logo img {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
 }
