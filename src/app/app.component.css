@@ -91,7 +91,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 90vh;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
   background-color: #020b2a;
@@ -221,7 +221,7 @@ body {
 .robot {
   position: absolute;
   right: 0;
-  bottom: -100px;
+  bottom: -150px;
   width: 600px;
   height: auto;
   animation: floatAnimation 6s ease-in-out infinite;
@@ -242,7 +242,7 @@ body {
 @media (max-width: 768px) {
   .robot {
     width: 400px;
-    bottom: -10px;
+    bottom: -50px;
   }
 
   .hero-content {
