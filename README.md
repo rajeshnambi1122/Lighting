@@ -28,6 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Notes
 
-ng build --configuration production --base-href "https://rajeshnambi1122.github.io/Lighting/"
+ng build --configuration production --base-href "https://rajeshnambi1122.github.io/Lightning/"
 
-npx angular-cli-ghpages --dir=dist/Lighting
+npx angular-cli-ghpages --dir=dist/Lightning
