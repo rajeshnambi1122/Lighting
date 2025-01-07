@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://script.google.com/macros/s/AKfycbyZovyENZRSCPDqfsHNY8EsFG_tIT8dFimDeiB6dfOAPFiLd1mW40IfXP-VppvrqJ0b/exec",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

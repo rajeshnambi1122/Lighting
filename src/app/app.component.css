@@ -69,6 +69,7 @@ body {
   border: 1px solid #00e5ff;
   color: #00e5ff !important;
   background: transparent;
+  text-decoration: none;
 }
 
 .join-community:hover {
@@ -133,6 +134,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
+  text-decoration: none;
   background: rgba(0, 229, 255, 0.1);
   border: 1px solid #00e5ff;
   padding: 1rem 2rem;
@@ -776,6 +778,7 @@ footer {
   .telegram-button-large {
     padding: 0.5rem 1rem; /* Adjust padding for mobile */
     font-size: 1rem; /* Adjust font size for mobile */
+    text-decoration: none;
     align-items: center; /* Center align items */
   }
 
