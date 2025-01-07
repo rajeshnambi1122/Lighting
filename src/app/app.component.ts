@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lighting';
+  constructor(private http: HttpClient) {}
 
   sendMessage(event: Event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
 
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
@@ -19,24 +21,22 @@ export class AppComponent {
       message: formData.get('message'),
     };
 
-    fetch(
-      'https://script.google.com/macros/s/AKfycbwTdmFWDmEg8npHLbnwFKaVhrG_Qw-m6WXxTFcBHevKHToTh1lzmV2symdlSjgYa4gE/exec',
-      {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json',
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    this.http
+      .post(
+        'https://script.google.com/macros/s/AKfycbwdlb68CflYpqt5K11BuS8udHJ-ORVmX9Hg0XWwMuaiZgo_IBHCNCTksANTgtMrBvk/exec',
+        data,
+        { headers }
+      )
+      .subscribe(
+        (response) => {
+          console.log('Success:', response);
+          alert('Message sent successfully!');
         },
-      }
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('Success:', data);
-        // Optionally, show a success message to the user
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        // Optionally, show an error message to the user
-      });
+        (error) => {
+          console.error('Error:', error);
+        }
+      );
   }
 }
