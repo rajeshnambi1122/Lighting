@@ -19,13 +19,16 @@ export class AppComponent {
       message: formData.get('message'),
     };
 
-    fetch('/api', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
+    fetch(
+      'https://script.google.com/macros/s/AKfycbyZovyENZRSCPDqfsHNY8EsFG_tIT8dFimDeiB6dfOAPFiLd1mW40IfXP-VppvrqJ0b/exec',
+      {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log('Success:', data);
