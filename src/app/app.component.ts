@@ -20,7 +20,7 @@ export class AppComponent {
     };
 
     fetch(
-      'https://script.google.com/macros/s/AKfycbyZovyENZRSCPDqfsHNY8EsFG_tIT8dFimDeiB6dfOAPFiLd1mW40IfXP-VppvrqJ0b/exec',
+      'https://script.google.com/macros/s/AKfycbwTdmFWDmEg8npHLbnwFKaVhrG_Qw-m6WXxTFcBHevKHToTh1lzmV2symdlSjgYa4gE/exec',
       {
         method: 'POST',
         body: JSON.stringify(data),
