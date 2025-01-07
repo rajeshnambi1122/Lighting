@@ -25,7 +25,7 @@ export class AppComponent {
 
     this.http
       .post(
-        'https://script.google.com/macros/s/AKfycbwdlb68CflYpqt5K11BuS8udHJ-ORVmX9Hg0XWwMuaiZgo_IBHCNCTksANTgtMrBvk/exec',
+        'https://script.google.com/macros/s/AKfycbzQFURSGiq_sRQA8iScKOvzhSu8HhelfH1AZ4y0p4Cg7GvVvtfTAsthVW1ZZkcinwDajw/exec',
         data,
         { headers }
       )
