@@ -25,11 +25,9 @@ export class AppComponent {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
     this.http
-      .post(
-        'https://cors-proxy-rajeshnambis-projects.vercel.app/api/send-message',
-        data,
-        { headers }
-      )
+      .post('https://cors-forwardserver.vercel.app/api/send-message', data, {
+        headers,
+      })
       .subscribe(
         (response) => {
           console.log('Success:', response);
