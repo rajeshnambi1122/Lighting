@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'lighting';
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
 
   sendMessage(event: Event) {
     event.preventDefault();
@@ -25,14 +26,16 @@ export class AppComponent {
 
     this.http
       .post(
-        'https://script.google.com/macros/s/AKfycbzQFURSGiq_sRQA8iScKOvzhSu8HhelfH1AZ4y0p4Cg7GvVvtfTAsthVW1ZZkcinwDajw/exec',
+        'https://cors-proxy-rajeshnambis-projects.vercel.app/api/send-message',
         data,
         { headers }
       )
       .subscribe(
         (response) => {
           console.log('Success:', response);
-          alert('Message sent successfully!');
+          this.snackBar.open('Message sent successfully!', 'Close', {
+            duration: 3000,
+          });
         },
         (error) => {
           console.error('Error:', error);
