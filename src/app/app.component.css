@@ -295,6 +295,16 @@ body {
   border-radius: 16px;
   text-align: center;
   transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.carousel-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Optional: inherit color from parent */
+}
+
+.carousel-link:hover {
+  text-decoration: underline; /* Optional: add underline on hover */
 }
 
 @keyframes scroll {
