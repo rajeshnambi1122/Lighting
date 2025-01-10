@@ -194,7 +194,7 @@ body {
   .hero-section {
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .hero-content {
